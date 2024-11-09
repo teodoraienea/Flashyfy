@@ -4,6 +4,8 @@ import './App.css';
 import Cards from './pages/Cards/Cards';
 import Home from './pages/Home/Home';
 import Header from './components/Header';
+import Login from './pages/login/login'; 
+import Register from './pages/login/register'; 
 
 function App() {
   const location = useLocation();
@@ -17,8 +19,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cards" element={<Cards />} />
+        <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="*" element={<Login />} /> {/* Redirects to Login if no match */}
       </Routes>
     </>
+   
   );
 }
 
