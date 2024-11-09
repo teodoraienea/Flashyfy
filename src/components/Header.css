@@ -1,0 +1,51 @@
+/* Header.css */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #35223b44; 
+    color: #7c2d90; 
+  }
+  
+  .header-left {
+    flex: 1;
+  }
+  
+  .app-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #37313160;
+    font-size: 18px;
+  }
+  
+  .nav-links a:hover {
+    color: #7c2d90; 
+  }
+  
+  .user-greeting {
+    margin-left: 20px;
+    font-size: 18px;
+  }
+  
