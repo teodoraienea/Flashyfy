@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './login.css'; 
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         email: '',
         password: ''
@@ -19,10 +21,8 @@ export default function Login() {
     const handleSubmit = (event) => {
         event.preventDefault();
         
-        // Clear previous error
         setError(null);
         
-        // Send login data to backend
         fetch(`${process.env.REACT_APP_BACKEND_URL}/login`, {
             method: 'POST',
             headers: {
@@ -38,7 +38,7 @@ export default function Login() {
         })
         .then(data => {
             console.log('Login successful:', data); 
-            // Redirect or perform other login success actions here
+            navigate('/cards');
         })
         .catch(error => {
             setError(error.message);

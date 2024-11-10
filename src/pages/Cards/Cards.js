@@ -64,7 +64,7 @@ const Cards = () => {
       const savedCard = await response.json();
       setCards(prevCards => [...prevCards, savedCard]);
   
-      setNewCard({ question: '', answer: '', category: '' }); //reset card form
+      setNewCard({ question: '', answer: '', category: '' }); 
       setError('');
     } catch (error) {
       console.error('Error saving card:', error);

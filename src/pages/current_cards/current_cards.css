@@ -1,4 +1,3 @@
-/* General styling for the review page */
 .review-page {
     display: flex;
     flex-direction: column;
@@ -26,22 +25,19 @@ h1 {
     background-color: #9333d1;
     color: rgb(0, 0, 0);
     border: none;
-    border-radius: 10px; /* Match the form's button border radius */
+    border-radius: 10px; 
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    /* Set the initial shadow to match the form */
     box-shadow: 1px 1px 5px 1px #6e6d6d;
 }
 
 .deck-button:hover {
     background-color: #891fcf;
     color: black;
-    /* Enhance shadow on hover */
     box-shadow: 1px 1px 2px 1px #504c4c;
 }
 
 .deck-button:active {
     background-color: #821ac7;
-    /* Keep the shadow effect active */
     box-shadow: 1px 1px 5px 1px #6e6d6d;
 }

@@ -11,27 +11,24 @@ const FlashcardPage = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    // Fetch flashcards data on component mount
     useEffect(() => {
-        // Assuming the flashcards API is available at the backend URL
         fetch(`${process.env.REACT_APP_BACKEND_URL}/flashcards?deckId=${deckId}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Failed to fetch flashcards.');
                 }
-                return response.json(); // Parse JSON from response
+                return response.json(); 
             })
             .then(data => {
-                setFlashcards(data); // Set fetched data to state
-                setLoading(false); // Stop loading
+                setFlashcards(data);
+                setLoading(false); 
             })
             .catch(error => {
-                setError(error.message); // Set error message
-                setLoading(false); // Stop loading
+                setError(error.message); 
+                setLoading(false);
             });
-    }, [deckId]); // Only run when deckId changes
+    }, [deckId]);
 
-    // Randomly select a card from the fetched flashcards
     const randomCardIndex = Math.floor(Math.random() * flashcards.length);
     const [currentCard, setCurrentCard] = useState(flashcards[randomCardIndex]);
 
@@ -44,7 +41,7 @@ const FlashcardPage = () => {
     };
 
     const handleShowAnswer = () => {
-        setIsFlipped(prev => !prev); // Toggle flip state
+        setIsFlipped(prev => !prev);
     };
 
     const handleNextQuestion = () => {
@@ -55,7 +52,6 @@ const FlashcardPage = () => {
         setCurrentCard(flashcards[newCardIndex]);
     };
 
-    // Render loading, error, or content
     if (loading) {
         return <div>Loading flashcards...</div>;
     }

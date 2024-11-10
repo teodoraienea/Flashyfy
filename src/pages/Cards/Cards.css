@@ -67,14 +67,12 @@
     border-radius: 8px;
   }
   
-  /* Error Message Styling */
   .error-message {
     color: #f44336;
     font-size: 0.9rem;
     text-align: center;
   }
   
-  /* Search Bar Styling */
   .search-container .MuiInputBase-root {
     border-radius: 8px;
     font-size: 1rem;

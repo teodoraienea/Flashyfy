@@ -18,10 +18,9 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-bottom: 40px; /* Added margin to push buttons lower */
+    margin-bottom: 40px; 
 }
 
-/* Flip effect */
 .flashcard.flipped .card-front {
     transform: rotateY(180deg);
 }
@@ -46,7 +45,6 @@
     transition: transform 0.5s;
 }
 
-/* Card front style (question) */
 .card-front {
     display: flex;
     flex-direction: column;
@@ -64,7 +62,6 @@
     border: 1px solid #ca91f0;
 }
 
-/* Card back style (answer) */
 .card-back {
     display: flex;
     flex-direction: column;
@@ -78,9 +75,8 @@
     color: #000000;
 }
 
-/* Buttons */
 .button-container {
-    margin-top: 30px; /* Increased margin to push buttons even lower */
+    margin-top: 30px;
     display: flex;
     gap: 10px;
 }
@@ -105,7 +101,6 @@ button:active {
     background-color: #821ac7;
 }
 
-/* Feedback messages */
 .feedback-message {
     margin-top: 20px;
     padding: 10px;

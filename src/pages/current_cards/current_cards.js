@@ -10,7 +10,6 @@ export default function CurrentCards() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        // Fetching decks from the backend API
         const fetchDecks = async () => {
             try {
                 const response = await fetch('https://your-backend-url.com/api/decks');
@@ -18,7 +17,7 @@ export default function CurrentCards() {
                     throw new Error('Failed to fetch decks');
                 }
                 const data = await response.json();
-                setDecks(data);  // Assume the backend returns an array of decks
+                setDecks(data);  
             } catch (error) {
                 setError(error.message);
             } finally {
@@ -27,7 +26,7 @@ export default function CurrentCards() {
         };
 
         fetchDecks();
-    }, []);  // Empty dependency array ensures this runs once when the component mounts
+    }, []); 
 
     const handleDeckClick = (deckId) => {
         navigate(`/review/${deckId}`);

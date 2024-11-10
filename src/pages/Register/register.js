@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 import './register.css';
 
 export default function Register() {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         username: '',
         email: '',
@@ -20,7 +22,7 @@ export default function Register() {
         }));
 
         if (name === 'username') {
-            setValidUsername(!value.includes(' ')); // No spaces allowed in username
+            setValidUsername(!value.includes(' ')); 
         }
 
         if (name === 'password') {
@@ -60,6 +62,7 @@ export default function Register() {
         })
         .then(data => {
             setSuccess('Registration successful. Please log in!');
+            navigate('/login');
         })
         .catch(error => {
             setError(error.message);
