@@ -7,7 +7,7 @@ html{
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: rgba(128, 128, 128, 0.236);
+  background-color: rgba(83, 6, 106, 0.236);
   font-family: Roboto, sans-serif;
 }
 
@@ -19,6 +19,7 @@ body{
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: rgba(128, 128, 128, 0.236);
+  color:rgba(77, 11, 97, 0.236);
+  background-color: rgba(71, 24, 85, 0.236);
   font-family: Roboto, sans-serif;
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Cards.css';
 import { TextField, Button, Select, MenuItem, InputLabel, FormControl, CircularProgress } from '@mui/material'; 
+import { useNavigate } from 'react-router-dom';
 
 const Cards = () => {
   const [cards, setCards] = useState([]);
@@ -9,6 +10,7 @@ const Cards = () => {
   const [categories, setCategories] = useState([]);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchCategories();
@@ -75,6 +77,10 @@ const Cards = () => {
     setError('');
   };
 
+  const HandleDecks = () =>{
+    navigate('/decks');
+  }
+
   return (
     <div className="card-page-container">
       <div className="search-button-container">
@@ -85,7 +91,7 @@ const Cards = () => {
           onChange={handleSearchChange}
           fullWidth
         />
-        <Button className="deck-button">
+        <Button className="deck-button" onClick={HandleDecks}>
           My Deck of Cards
         </Button>
       </div>

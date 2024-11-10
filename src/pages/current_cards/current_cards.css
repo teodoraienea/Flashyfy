@@ -1,0 +1,47 @@
+/* General styling for the review page */
+.review-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ca91f0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #000000;
+}
+
+.deck-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.deck-button {
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    background-color: #9333d1;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 10px; /* Match the form's button border radius */
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    /* Set the initial shadow to match the form */
+    box-shadow: 1px 1px 5px 1px #6e6d6d;
+}
+
+.deck-button:hover {
+    background-color: #891fcf;
+    color: black;
+    /* Enhance shadow on hover */
+    box-shadow: 1px 1px 2px 1px #504c4c;
+}
+
+.deck-button:active {
+    background-color: #821ac7;
+    /* Keep the shadow effect active */
+    box-shadow: 1px 1px 5px 1px #6e6d6d;
+}
