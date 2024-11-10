@@ -84,13 +84,6 @@ const Cards = () => {
   return (
     <div className="card-page-container">
       <div className="search-button-container">
-        <TextField
-          label="Search by Category"
-          variant="outlined"
-          value={searchCategory}
-          onChange={handleSearchChange}
-          fullWidth
-        />
         <Button className="deck-button" onClick={HandleDecks}>
           My Deck of Cards
         </Button>
