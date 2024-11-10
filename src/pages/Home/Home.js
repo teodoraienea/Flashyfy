@@ -63,12 +63,10 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="cta-section">
-        <h2>Start Learning Smarter</h2>
-        <button className="cta-button" onClick={() => alert('Get Started!')}>
-          Create Your First Deck
-        </button>
-      </section>
+      <h2>Start Learning Smarter</h2>
+      <button className="cta-button" onClick={handleGetStarted}>
+        Create Your First Deck
+      </button>
     </div>
   );
 };
